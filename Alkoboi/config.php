@@ -1,9 +1,9 @@
 <?php
 
 // settings
-$filename = "data/alkon-hinnasto-ascii.csv";
+$filename = "data/alkon-hinnasto.csv";
 $filename_xlxs = "data/alkon-hinnasto.xlsx";
-$priceListDate = "14.09.2020";
+$priceListDate = "19.11.2023";
 
 // define columns to include in the display
 $columns2Include = [
@@ -13,17 +13,10 @@ $columns2Include = [
 "Pullokoko",
 "Hinta",
 "Litrahinta",
-    
-"Uutuus",
-"Hinnastojärjestyskoodi",
- 
 "Tyyppi",
-
-"Alatyyppi",
-"Erityisryhmä",
-"Oluttyyppi",
- 
 "Valmistusmaa",
+"Alkoholi-%",
+"Energia kcal/100 ml",
 /*
 "Alue",
 "Vuosikerta",
@@ -41,6 +34,10 @@ $columns2Include = [
 "Energia kcal/100 ml",
 "Valikoima",
 "EA"
+"Erityisryhmä",
+"Oluttyyppi",
+"Uutuus",
+"Hinnastojärjestyskoodi",
  * 
  */
 ];

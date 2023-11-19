@@ -31,9 +31,11 @@ function createAlkoProductsTable($products, $columns2Include, $columnNamesMap, $
         // Apply filters here based on user criteria
         if (($filters['TYPE'] === null || $product[$columnNamesMap['Tyyppi']] === $filters['TYPE']) &&
             ($filters['COUNTRY'] === null || $product[$columnNamesMap['Valmistusmaa']] === $filters['COUNTRY']) &&
-            
             ($filters['PRICELOW'] === null || $product[$columnNamesMap['Hinta']] >= $filters['PRICELOW']) &&
-            ($filters['PRICEHIGH'] === null || $product[$columnNamesMap['Hinta']] <= $filters['PRICEHIGH'])) {
+            ($filters['PRICEHIGH'] === null || $product[$columnNamesMap['Hinta']] <= $filters['PRICEHIGH']) &&
+            ($filters['BOTTLESIZE'] === null || $product[$columnNamesMap['Pullokoko']] === $filters['BOTTLESIZE']) &&
+            ($filters['ENERGYLOW'] === null || $product[$columnNamesMap['Energia kcal/100 ml']] >= $filters['ENERGYLOW']) &&
+            ($filters['ENERGYHIGH'] === null || $product[$columnNamesMap['Energia kcal/100 ml']] <= $filters['ENERGYHIGH'])) {
             $filteredProducts[] = $product;
         }
     }
@@ -53,6 +55,8 @@ function createAlkoProductsTable($products, $columns2Include, $columnNamesMap, $
 
     return $t;
 }
+
+
 
 function generateView($alkoData, $filters, $tblId = null) {
     global $columns2Include, $columnNamesMap;
