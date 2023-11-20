@@ -2,10 +2,10 @@
 
 This repository contains a PHP-based web application that showcases Alko’s product catalog. Users can browse and filter products by type, country of manufacture, and more.
 
-## Overview ℹ️
+## Overview 📌 ℹ️
 
 The app fetches data from Alko’s servers as an XLSX file, converts it into a daily updated CSV file, and uses this CSV file to display the product table on the webpage.
-the webpage contains 25 rows perpage and 10 columns.
+the webpage contains 25 rows per page and 10 columns.
 
 ### Project Structure 📂
 
@@ -28,11 +28,22 @@ the webpage contains 25 rows perpage and 10 columns.
 
 
 The script executes these steps:
-first checks the date of the file;
-1. Fetch the XLSX file.
-2. Convert it to a CSV file.
+- first checks the date of the file.
+- Fetch the XLSX file.
+- Convert it to a CSV file.
 
 
-### Access the Alko Product Catalog
+### Access the Alko Product Catalog 🌐
 
 The web application is accessible at [Alko Product Catalog](https://niisku.lab.fi/~x108669/alko/)
+
+### for evaluation 📝
+
+- i made everything else but not the database connection.
+- this project is divided separate modules.
+- has 5 different filters for the products.
+- page has 25 rows of products per page.
+- user can browser catalogs using prev and next button.
+- this updates the csv file every day from alkos server.
+- some bootstrap ui added.
+- code has documentation.
