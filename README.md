@@ -41,6 +41,6 @@ getDateFromCsv($local_filename_csv): Extracts the date from the first line of th
 
 The script executes the following steps:
 
-Fetch the XLSX file.
-Convert the XLSX file to a CSV file.
-Extract the date from the CSV file.
+1.Fetch the XLSX file.
+2.Convert the XLSX file to a CSV file.
+3.Extract the date from the CSV file.
