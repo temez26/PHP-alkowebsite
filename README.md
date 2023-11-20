@@ -5,16 +5,21 @@ This project is a simple web application built using PHP to display a product ca
 ## Overview ℹ️
 
 The application allows users to browse through the product catalog and apply filters based on different criteria such as type, country of manufacture, and more.
+App gets data form alkos servers as xlsx file and then converts it to csv file and the csv fetch is daily in model.php file there is functions that gets the data converts it and then update date from the csv file to the $priceListDate variable and then the variable data is displayed in the header.
+
 
 ## Project Structure 📂
 
 The project directory structure is organized as follows:
 
-- `css/`: Contains CSS stylesheets.
-- `js/`: Contains JavaScript files.
-- `includes/`: Contains header and footer PHP files for reuse.
-- `index.php`: Main PHP file handling product catalog and filters.
-- `database.csv`: Data source (CSV file or database connection).
+- The application uses a custom JavaScript file `scripts/js/Cookies.js`.
+- The PHP settings are configured to display all errors except deprecated ones.
+- The application includes several PHP files:
+  - `model.php`
+  - `controller.php`
+  - `scripts/php/Pagination.php`
+  - `scripts/php/Form.php`
+- The main feature of the application is the Alko product table which is displayed on the webpage.
 
 ## Usage 🚀
 
@@ -30,13 +35,7 @@ The project directory structure is organized as follows:
 - `css/style.css`: Stylesheet for the web application.
 - `js/script.js`: JavaScript file for client-side scripting.
 
-## How to Run 🏃‍♂️
 
-To run the project:
-
-1. Configure a local server environment (e.g., XAMPP, WAMP).
-2. Import or set up the database if applicable.
-3. Open the project in a web browser.
 
 
 
