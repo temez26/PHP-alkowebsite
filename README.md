@@ -5,6 +5,7 @@ This repository contains a PHP-based web application that showcases Alko’s pro
 ## Overview ℹ️
 
 The app fetches data from Alko’s servers as an XLSX file, converts it into a daily updated CSV file, and uses this CSV file to display the product table on the webpage.
+the webpage contains 25 rows perpage and 10 columns.
 
 ### Project Structure 📂
 
