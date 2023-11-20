@@ -30,12 +30,17 @@ The project directory structure is organized as follows:
 
 ## Files and Components 📝
 
-- `index.php`: Main PHP file displaying the product catalog and applying filters.
-- `includes/header.php` and `includes/footer.php`: Reusable header and footer components for HTML structure.
-- `css/style.css`: Stylesheet for the web application.
-- `js/script.js`: JavaScript file for client-side scripting.
+- In the module.php happens the fetch for the newest data form the alkos server
+
+Functions
+console_log($output): Logs a message to the browser console.
+fetchXlxs($remote_filename_xlsx, $local_filename_xlsx): Fetches the XLSX file from the remote URL and saves it locally. If the local file already exists and was last modified today, it does not fetch the file again.
+xlsxToCsv($local_filename_xlsx, $local_filename_csv): Converts the XLSX file to a CSV file. If the local CSV file already exists and was last modified today, it does not convert the file again.
+getDateFromCsv($local_filename_csv): Extracts the date from the first line of the CSV file.
 
 
+The script executes the following steps:
 
-
-
+Fetch the XLSX file.
+Convert the XLSX file to a CSV file.
+Extract the date from the CSV file.
