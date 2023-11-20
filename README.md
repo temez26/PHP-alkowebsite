@@ -20,7 +20,7 @@ The project directory structure is organized as follows:
 - `scripts/php/Form.php`: PHP file handling form functionality for the filters.
 - `scripts/php/List.php`: PHP file managing list functionality for the product table.
 
-## Files and Components 📝
+## How the model.php fetches latest xlsx file  📝
 
 `model.php`: This file contains the following functions:
 - `console_log($output)`: Logs a message to the browser console.
