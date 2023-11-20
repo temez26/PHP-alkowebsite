@@ -13,12 +13,12 @@ The project directory structure is organized as follows:
 - `scripts/js/Cookies.js`: A custom JavaScript file handling the cookie functionality.
 - `model.php`: PHP file fetching and converting data from Alko’s servers, extracting data from the CSV file.
 - `controller.php`: PHP file managing user input and passing it to the model and view.
-- `view.php`: PHP file rendering the HTML output, displaying the product table and filters.
-- `config.php`: PHP file containing configuration settings for the application (remote/local file names, PHP error reporting level).
+- `view.php`: PHP file rendering the HTML output, displaying the product table and filters this is where the $alkoProductTable is created.
+- `config.php`: PHP file containing configuration settings for the csv file.
 - `index.php`: The main PHP file including the model, controller, and view files.
 - `scripts/php/Pagination.php`: PHP file managing pagination for the product table.
-- `scripts/php/Form.php`: PHP file handling form functionality for the filters.
-- `scripts/php/List.php`: PHP file managing list functionality for the product table.
+- `scripts/php/Form.php`: PHP file containing inputs for the filters.
+- `scripts/php/List.php`: PHP file containing filternames for the country bottlesize and type.
 
 ## How the model.php fetches latest xlsx file  📝
 
