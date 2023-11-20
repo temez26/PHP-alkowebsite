@@ -25,12 +25,13 @@ the webpage contains 25 rows perpage and 10 columns.
 - `console_log($output)`: Logs a message to the browser console.
 - `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally.
 - `xlsxToCsv($local_filename_xlsx, $local_filename_csv)`: Converts the XLSX file to a CSV file.
-- `getDateFromCsv($local_filename_csv)`: Extracts the date from the CSV file.
+
 
 The script executes these steps:
+first checks the date of the file;
 1. Fetch the XLSX file.
 2. Convert it to a CSV file.
-3. Extract the date from the CSV file.
+
 
 ### Access the Alko Product Catalog
 
