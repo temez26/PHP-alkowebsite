@@ -9,7 +9,7 @@ the webpage contains 25 rows per page and 10 columns.
 
 ### Project Structure 📂
 
-- `scripts/js/Cookies.js`: Custom JavaScript handling cookies.
+- `scripts/js/Cookies.js`: Custom JavaScript handling cookies and url parameters for filters  on the webpage.
 - `model.php`: Fetches data from Alko’s servers, extracts information from the CSV file.
 - `controller.php`: Manages user input and interacts with the model and view.
 - `view.php`: Renders the HTML output, displaying the product table and filters.
