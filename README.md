@@ -1,34 +1,36 @@
 # Alko Product Catalog 🍷
 
-This repository houses a straightforward web application constructed with PHP. Its primary function is to showcase a product catalog from Alko’s store. Users can conveniently browse through the catalog and apply filters based on various criteria like product type, country of manufacture, and more.
+This repository contains a PHP-based web application that showcases Alko’s product catalog. Users can browse and filter products by type, country of manufacture, and more.
 
 ## Overview ℹ️
 
-The application retrieves data from Alko’s servers in the form of an XLSX file, which is then transformed into a CSV file. This CSV file undergoes daily updates with the most recent product information. The web application employs this CSV file to present the product table on the webpage.
+The app fetches data from Alko’s servers as an XLSX file, converts it into a daily updated CSV file, and uses this CSV file to display the product table on the webpage.
 
-## Project Structure 📂
+### Project Structure 📂
 
-The project directory structure is organized as follows:
+- `scripts/js/Cookies.js`: Custom JavaScript handling cookies.
+- `model.php`: Fetches data from Alko’s servers, extracts information from the CSV file.
+- `controller.php`: Manages user input and interacts with the model and view.
+- `view.php`: Renders the HTML output, displaying the product table and filters.
+- `config.php`: Contains configuration settings for the CSV file.
+- `index.php`: Main file including the model, controller, and view.
+- `scripts/php/Pagination.php`: Manages pagination for the product table.
+- `scripts/php/Form.php`: Contains inputs for the filters.
+- `scripts/php/List.php`: Contains filter names for country, bottle size, and type.
 
-- `scripts/js/Cookies.js`: A custom JavaScript file handling the cookie functionality.
-- `model.php`: PHP file fetching and converting data from Alko’s servers, extracting data from the CSV file.
-- `controller.php`: PHP file managing user input and passing it to the model and view.
-- `view.php`: PHP file rendering the HTML output, displaying the product table and filters this is where the $alkoProductTable is created.
-- `config.php`: PHP file containing configuration settings for the csv file.
-- `index.php`: The main PHP file including the model, controller, and view files.
-- `scripts/php/Pagination.php`: PHP file managing pagination for the product table.
-- `scripts/php/Form.php`: PHP file containing inputs for the filters.
-- `scripts/php/List.php`: PHP file containing filternames for the country bottlesize and type.
+### How `model.php` Fetches Latest XLSX File 📝
 
-## How the model.php fetches latest xlsx file  📝
-
-`model.php`: This file contains the following functions:
+`model.php` contains functions:
 - `console_log($output)`: Logs a message to the browser console.
-- `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally. It doesn't fetch the file again if the local file exists and was modified today.
-- `xlsxToCsv($local_filename_xlsx, $local_filename_csv)`: Converts the XLSX file to a CSV file. It doesn't convert the file again if the local CSV file exists and was modified today.
-- `getDateFromCsv($local_filename_csv)`: Extracts the date from the first line of the CSV file.
+- `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally.
+- `xlsxToCsv($local_filename_xlsx, $local_filename_csv)`: Converts the XLSX file to a CSV file.
+- `getDateFromCsv($local_filename_csv)`: Extracts the date from the CSV file.
 
-The script executes the following steps:
+The script executes these steps:
 1. Fetch the XLSX file.
-2. Convert the XLSX file to a CSV file.
+2. Convert it to a CSV file.
 3. Extract the date from the CSV file.
+
+### Access the Alko Product Catalog
+
+The web application is accessible at [Alko Product Catalog](https://niisku.lab.fi/~x108669/alko/)
