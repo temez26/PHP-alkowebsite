@@ -19,18 +19,17 @@ the webpage contains 25 rows per page and 10 columns.
 - `scripts/php/Form.php`: Contains inputs for the filters.
 - `scripts/php/List.php`: Contains filter names for country, bottle size, and type.
 
-### How `model.php` Fetches Latest XLSX File 📝
-
-`model.php` contains functions:
+### How `updatefile.php` Fetches Latest XLSX File 📝
+- The server has cron job that runs the updatefile.php every morning 9:10.
+`updatefile.php` contains functions:
 - `console_log($output)`: Logs a message to the browser console.
 - `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally.
 - `xlsxToCsv($local_filename_xlsx, $local_filename_csv)`: Converts the XLSX file to a CSV file.
 
 
 The script executes these steps:
-- first checks the date of the file.
 - Fetch the XLSX file.
-- Convert it to a CSV file.
+- Converts it to a CSV file.
 
 
 ### Access the Alko Product Catalog 🌐
