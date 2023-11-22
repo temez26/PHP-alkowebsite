@@ -1,6 +1,6 @@
 <?php
 
-require_once('vendor/shuchkin/simplexlsx/src/SimpleXLSX.php');
+require_once('../vendor/shuchkin/simplexlsx/src/SimpleXLSX.php');
 
 
 // Function to test parsing an XLSX file
