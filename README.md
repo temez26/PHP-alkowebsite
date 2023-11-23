@@ -20,7 +20,7 @@ the webpage contains 25 rows per page and 10 columns.
 - `scripts/php/List.php`: Contains filter names for country, bottle size, and type.
 
 ### How `updatefile.php` Fetches Latest XLSX File 📝
-- The server has cron job that runs the updatefile.php every morning 10:10.
+- The server has cron job that runs the updatefile.php every morning 10:50.
 `updatefile.php` contains functions:
 - `console_log($output)`: Logs a message to the browser console.
 - `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally.
