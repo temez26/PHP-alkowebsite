@@ -1,48 +1,46 @@
-# Alko Product Catalog 🍷
+# Alko Product Catalog
 
-This repository contains a PHP-based web application that showcases Alko’s product catalog. Users can browse and filter products by type, country of manufacture, and more.
+A PHP-based web application for browsing Alko's product catalog with advanced filtering and pagination capabilities.
 
-## Overview 📌 ℹ️
+## Features
 
-The app fetches data from Alko’s servers as an XLSX file, converts it into a daily updated CSV file, and uses this CSV file to display the product table on the webpage.
-the webpage contains 25 rows per page and 10 columns.
+- **Automated Data Updates**: Daily synchronization with Alko's product database via XLSX/CSV conversion
+- **Advanced Filtering**: Filter products by type, country, bottle size, and additional criteria
+- **Pagination**: 25 products per page with intuitive navigation
+- **Responsive Design**: Bootstrap-based UI for optimal user experience
+- **Modular Architecture**: Organized MVC structure for maintainability
 
-### Project Structure 📂
+## Architecture
 
-- `scripts/js/Cookies.js`: Custom JavaScript handling cookies and url parameters for filters  on the webpage.
-- `model.php`: Fetches data from Alko’s servers, extracts information from the CSV file.
-- `controller.php`: Manages user input and interacts with the model and view.
-- `view.php`: Renders the HTML output, displaying the product table and filters.
-- `config.php`: Contains configuration settings for the CSV file.
-- `index.php`: Main file including the model, controller, and view.
-- `scripts/php/Pagination.php`: Manages pagination for the product table.
-- `scripts/php/Form.php`: Contains inputs for the filters.
-- `scripts/php/List.php`: Contains filter names for country, bottle size, and type.
+```
+├── index.php           # Application entry point
+├── model.php           # Data layer and CSV processing
+├── controller.php      # Business logic and request handling
+├── view.php           # Presentation layer
+├── config.php         # Application configuration
+├── data/
+│   ├── updatefile.php # Automated data synchronization
+│   └── alkon-hinnasto.csv
+└── scripts/
+    ├── php/           # Pagination, forms, and utilities
+    └── js/            # Client-side functionality
+```
 
-### How `updatefile.php` Fetches Latest XLSX File 📝
-- The server has cron job that runs the updatefile.php every morning 10:50.
-`updatefile.php` contains functions:
-- `console_log($output)`: Logs a message to the browser console.
-- `fetchXlxs($remote_filename_xlsx, $local_filename_xlsx)`: Fetches the XLSX file from the remote URL and saves it locally.
-- `xlsxToCsv($local_filename_xlsx, $local_filename_csv)`: Converts the XLSX file to a CSV file.
+## Data Synchronization
 
+The application automatically fetches and processes Alko's product data:
 
-The script executes these steps:
-- Fetch the XLSX file.
-- Converts it to a CSV file.
+- **Schedule**: Daily at 10:50 AM via cron job
+- **Process**: XLSX → CSV conversion for optimal performance
+- **Functions**: `fetchXlxs()`, `xlsxToCsv()`, `console_log()`
 
+## Demo
 
-### Access the Alko Product Catalog 🌐
+Live application: [Alko Product Catalog](https://niisku.lab.fi/~x108669/alko/)
 
-The web application is accessible at [Alko Product Catalog](https://niisku.lab.fi/~x108669/alko/)
+## Technical Stack
 
-### for evaluation 📝
-
-- i made everything else but not the database connection.
-- this project is divided separate modules.
-- has 5 different filters for the products.
-- page has 25 rows of products per page.
-- user can browser catalogs using prev and next button.
-- this updates the csv file every day from alkos server.
-- some bootstrap ui added.
-- code has documentation.
+- **Backend**: PHP with MVC architecture
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Data Processing**: SimpleXLSX library
+- **File Format**: CSV for data storage and retrieval
